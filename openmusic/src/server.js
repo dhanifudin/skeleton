@@ -32,16 +32,16 @@ const init = async () => {
       options: {
         service: albumsService,
         validator: AlbumsValidator,
-      }
+      },
     }, {
       plugin: songs,
       options: {
         service: songsService,
         validator: SongsValidator,
       },
-    }
+    },
   ]);
-   // penanganan client error secara internal.
+  // penanganan client error secara internal.
 
   server.ext('onPreResponse', (request, h) => {
     // mendapatkan konteks response dari request
